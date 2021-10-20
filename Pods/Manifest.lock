@@ -1,36 +1,59 @@
 PODS:
-  - AsyncDisplayKit (1.9.80):
-    - AsyncDisplayKit/PINRemoteImage (= 1.9.80)
-  - AsyncDisplayKit/ASDealloc2MainObject (1.9.80)
-  - AsyncDisplayKit/Core (1.9.80):
-    - AsyncDisplayKit/ASDealloc2MainObject
-  - AsyncDisplayKit/PINRemoteImage (1.9.80):
-    - AsyncDisplayKit/Core
-    - PINRemoteImage/iOS (>= 3.0.0-beta.2)
-  - PINCache (2.2.2)
-  - PINRemoteImage/Core (3.0.0-beta.2):
-    - PINCache (>= 2.1)
-  - PINRemoteImage/iOS (3.0.0-beta.2):
+  - PINCache (3.0.3):
+    - PINCache/Arc-exception-safe (= 3.0.3)
+    - PINCache/Core (= 3.0.3)
+  - PINCache/Arc-exception-safe (3.0.3):
+    - PINCache/Core
+  - PINCache/Core (3.0.3):
+    - PINOperation (~> 1.2.1)
+  - PINOperation (1.2.1)
+  - PINRemoteImage (3.0.3):
+    - PINRemoteImage/PINCache (= 3.0.3)
+  - PINRemoteImage/Core (3.0.3):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.3):
     - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.3):
+    - PINCache (~> 3.0.3)
+    - PINRemoteImage/Core
+  - Texture (3.1.0):
+    - Texture/AssetsLibrary (= 3.1.0)
+    - Texture/Core (= 3.1.0)
+    - Texture/MapKit (= 3.1.0)
+    - Texture/Photos (= 3.1.0)
+    - Texture/PINRemoteImage (= 3.1.0)
+    - Texture/Video (= 3.1.0)
+  - Texture/AssetsLibrary (3.1.0):
+    - Texture/Core
+  - Texture/Core (3.1.0)
+  - Texture/MapKit (3.1.0):
+    - Texture/Core
+  - Texture/Photos (3.1.0):
+    - Texture/Core
+  - Texture/PINRemoteImage (3.1.0):
+    - PINRemoteImage/iOS (~> 3.0.0)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (3.1.0):
+    - Texture/Core
 
 DEPENDENCIES:
-  - AsyncDisplayKit (from `git@github.com:facebook/AsyncDisplayKit.git`, branch `master`)
+  - PINRemoteImage
+  - Texture
 
-EXTERNAL SOURCES:
-  AsyncDisplayKit:
-    :branch: master
-    :git: git@github.com:facebook/AsyncDisplayKit.git
-
-CHECKOUT OPTIONS:
-  AsyncDisplayKit:
-    :commit: db04f4b851a069794a77ab45115db669b87b1683
-    :git: git@github.com:facebook/AsyncDisplayKit.git
+SPEC REPOS:
+  trunk:
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - Texture
 
 SPEC CHECKSUMS:
-  AsyncDisplayKit: ab57b10cd058797015c77be10407f3dc13027c85
-  PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
-  PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
+  PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
+  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
+  Texture: 2e8ab2519452515f7f5a520f5a8f7e0a413abfa3
 
-PODFILE CHECKSUM: 35d9b47b9f2334367b148e264cbb878ea9f89cd8
+PODFILE CHECKSUM: c509be168710ad18c11e561ac840f6b4da182be5
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.11.2

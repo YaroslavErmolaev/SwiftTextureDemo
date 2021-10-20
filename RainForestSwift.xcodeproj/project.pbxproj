@@ -11,12 +11,14 @@
 		AEB7014C1CDBABBD00745427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB7014B1CDBABBD00745427 /* AppDelegate.swift */; };
 		AEB7014E1CDBABBD00745427 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB7014D1CDBABBD00745427 /* ViewController.swift */; };
 		AEB701531CDBABBD00745427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB701521CDBABBD00745427 /* Assets.xcassets */; };
-		AEB701641CDBD6EC00745427 /* RainforestCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB701631CDBD6EC00745427 /* RainforestCardInfo.m */; };
 		AEB701681CDBD82600745427 /* AnimalTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB701671CDBD82600745427 /* AnimalTableNodeController.swift */; };
 		AEB7016B1CDBDD5500745427 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7016A1CDBDD5500745427 /* UIImage+ImageEffects.m */; };
 		AEB7016D1CDBDDA100745427 /* CardCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB7016C1CDBDDA100745427 /* CardCellNode.swift */; };
-		AED2C72E1CE2361600402210 /* GradientNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AED2C72D1CE2361600402210 /* GradientNode.m */; };
-		AED2C7311CE2384900402210 /* Factories.m in Sources */ = {isa = PBXBuildFile; fileRef = AED2C7301CE2384900402210 /* Factories.m */; };
+		CC0C8CD6271ED54F003B9E9A /* GradientNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C8CD5271ED54F003B9E9A /* GradientNode.swift */; };
+		CC0C8CD8271ED5BA003B9E9A /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C8CD7271ED5BA003B9E9A /* Factories.swift */; };
+		CC0C8CDA271ED8B4003B9E9A /* UIImage+ImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C8CD9271ED8B4003B9E9A /* UIImage+ImageEffects.swift */; };
+		CC0C8CDC271EDEFB003B9E9A /* ASImageNode+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C8CDB271EDEFB003B9E9A /* ASImageNode+Placeholder.swift */; };
+		CC0C8CDE271F01DB003B9E9A /* RainforestCardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C8CDD271F01DB003B9E9A /* RainforestCardInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,16 +31,15 @@
 		AEB701521CDBABBD00745427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEB701571CDBABBD00745427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEB7015D1CDBB17400745427 /* RainForestSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RainForestSwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		AEB701631CDBD6EC00745427 /* RainforestCardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RainforestCardInfo.m; sourceTree = "<group>"; };
-		AEB701651CDBD71D00745427 /* RainforestCardInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RainforestCardInfo.h; sourceTree = "<group>"; };
 		AEB701671CDBD82600745427 /* AnimalTableNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalTableNodeController.swift; sourceTree = "<group>"; };
 		AEB701691CDBDD5500745427 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		AEB7016A1CDBDD5500745427 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		AEB7016C1CDBDDA100745427 /* CardCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCellNode.swift; sourceTree = "<group>"; };
-		AED2C72C1CE2361600402210 /* GradientNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientNode.h; sourceTree = "<group>"; };
-		AED2C72D1CE2361600402210 /* GradientNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientNode.m; sourceTree = "<group>"; };
-		AED2C72F1CE2384900402210 /* Factories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factories.h; sourceTree = "<group>"; };
-		AED2C7301CE2384900402210 /* Factories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factories.m; sourceTree = "<group>"; };
+		CC0C8CD5271ED54F003B9E9A /* GradientNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientNode.swift; sourceTree = "<group>"; };
+		CC0C8CD7271ED5BA003B9E9A /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		CC0C8CD9271ED8B4003B9E9A /* UIImage+ImageEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageEffects.swift"; sourceTree = "<group>"; };
+		CC0C8CDB271EDEFB003B9E9A /* ASImageNode+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASImageNode+Placeholder.swift"; sourceTree = "<group>"; };
+		CC0C8CDD271F01DB003B9E9A /* RainforestCardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainforestCardInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +92,13 @@
 		AEB7014A1CDBABBD00745427 /* RainForestSwift */ = {
 			isa = PBXGroup;
 			children = (
-				AEB7015D1CDBB17400745427 /* RainForestSwift-Bridging-Header.h */,
 				AEB7014B1CDBABBD00745427 /* AppDelegate.swift */,
 				AEB7014D1CDBABBD00745427 /* ViewController.swift */,
 				AEB701671CDBD82600745427 /* AnimalTableNodeController.swift */,
 				AEB7016C1CDBDDA100745427 /* CardCellNode.swift */,
 				AEB701661CDBD72500745427 /* RainforestCards */,
 				AEB701521CDBABBD00745427 /* Assets.xcassets */,
+				AEB7015D1CDBB17400745427 /* RainForestSwift-Bridging-Header.h */,
 				AEB701571CDBABBD00745427 /* Info.plist */,
 			);
 			path = RainForestSwift;
@@ -106,14 +107,13 @@
 		AEB701661CDBD72500745427 /* RainforestCards */ = {
 			isa = PBXGroup;
 			children = (
-				AED2C72F1CE2384900402210 /* Factories.h */,
-				AED2C7301CE2384900402210 /* Factories.m */,
-				AED2C72C1CE2361600402210 /* GradientNode.h */,
-				AED2C72D1CE2361600402210 /* GradientNode.m */,
 				AEB701691CDBDD5500745427 /* UIImage+ImageEffects.h */,
 				AEB7016A1CDBDD5500745427 /* UIImage+ImageEffects.m */,
-				AEB701651CDBD71D00745427 /* RainforestCardInfo.h */,
-				AEB701631CDBD6EC00745427 /* RainforestCardInfo.m */,
+				CC0C8CD5271ED54F003B9E9A /* GradientNode.swift */,
+				CC0C8CD7271ED5BA003B9E9A /* Factories.swift */,
+				CC0C8CD9271ED8B4003B9E9A /* UIImage+ImageEffects.swift */,
+				CC0C8CDB271EDEFB003B9E9A /* ASImageNode+Placeholder.swift */,
+				CC0C8CDD271F01DB003B9E9A /* RainforestCardInfo.swift */,
 			);
 			name = RainforestCards;
 			sourceTree = "<group>";
@@ -130,7 +130,6 @@
 				AEB701451CDBABBD00745427 /* Frameworks */,
 				AEB701461CDBABBD00745427 /* Resources */,
 				8E54A03E278483EB1A496B6A /* [CP] Embed Pods Frameworks */,
-				D9D5AF2A0DD35A2649D0E3D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +151,8 @@
 				TargetAttributes = {
 					AEB701471CDBABBD00745427 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 45J56KRPP4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -160,6 +161,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -191,28 +193,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D9D5AF2A0DD35A2649D0E3D9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA9053270B5C9BC3B4A8A249 /* [CP] Check Pods Manifest.lock */ = {
@@ -221,13 +217,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RainForestSwift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -237,13 +236,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEB701641CDBD6EC00745427 /* RainforestCardInfo.m in Sources */,
 				AEB7016B1CDBDD5500745427 /* UIImage+ImageEffects.m in Sources */,
 				AEB7014E1CDBABBD00745427 /* ViewController.swift in Sources */,
-				AED2C72E1CE2361600402210 /* GradientNode.m in Sources */,
+				CC0C8CDA271ED8B4003B9E9A /* UIImage+ImageEffects.swift in Sources */,
 				AEB7016D1CDBDDA100745427 /* CardCellNode.swift in Sources */,
 				AEB701681CDBD82600745427 /* AnimalTableNodeController.swift in Sources */,
-				AED2C7311CE2384900402210 /* Factories.m in Sources */,
+				CC0C8CDE271F01DB003B9E9A /* RainforestCardInfo.swift in Sources */,
+				CC0C8CDC271EDEFB003B9E9A /* ASImageNode+Placeholder.swift in Sources */,
+				CC0C8CD6271ED54F003B9E9A /* GradientNode.swift in Sources */,
+				CC0C8CD8271ED5BA003B9E9A /* Factories.swift in Sources */,
 				AEB7014C1CDBABBD00745427 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,12 +341,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 45J56KRPP4;
 				INFOPLIST_FILE = RainForestSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RainForestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RainForestSwift/RainForestSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -356,11 +360,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 45J56KRPP4;
 				INFOPLIST_FILE = RainForestSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RainForestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RainForestSwift/RainForestSwift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

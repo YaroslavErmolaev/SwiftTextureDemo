@@ -2,12 +2,13 @@
 import UIKit
 import AsyncDisplayKit
 
-class AnimalTableNodeController: ASViewController {
+class AnimalTableNodeController: ASDKViewController<ASDisplayNode> {
     var animals: [RainforestCardInfo]!
     let tableNode: ASTableNode!
     
     init(animals: [RainforestCardInfo]) {
-        let tableNode = ASTableNode(style: .Plain)
+        let tableNode = ASTableNode()
+        
         self.animals = animals
         self.tableNode = tableNode
         
@@ -15,6 +16,10 @@ class AnimalTableNodeController: ASViewController {
         
         self.tableNode.delegate = self
         self.tableNode.dataSource = self
+        
+        self.tableNode.view.separatorStyle = .none
+        //Установка leadingScreensForBatching в 1.0 означает, что вы хотите, чтобы новые пакеты были загружены каждый раз, когда пользователь прокрутил к точке, где до конца таблицы остался лишь 1 элемент.
+        self.tableNode.leadingScreensForBatching = 1
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,14 +30,17 @@ class AnimalTableNodeController: ASViewController {
 // MARK: - ASTableDelegate
 
 extension AnimalTableNodeController: ASTableDelegate {
-    func tableView(tableView: ASTableView, willBeginBatchFetchWithContext context: ASBatchContext) {
+    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
         nextPageWithCompletion { (results) in
             self.insertNewRows(results)
             context.completeBatchFetching(true)
         }
     }
-    
-    func shouldBatchFetchForTableView(tableView: ASTableView) -> Bool {
+    /*
+     Этот метод нужен для того, чтобы сказать таблице, должна ли она продолжить выполнять запросы для загрузки новых пакетов. Если вы знаете, что загружать больше нечего – верните NO.
+     Если вы действительно хотите, чтобы эта таблица скроллилась бесконечно, просто верните YES, чтобы гарантировать, что всегда будут запрашиваться новые пакеты.
+     */
+    func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
         return true
     }
 }
@@ -40,50 +48,53 @@ extension AnimalTableNodeController: ASTableDelegate {
 // MARK: - ASTableDataSource
 
 extension AnimalTableNodeController: ASTableDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
         return animals.count
     }
     
-    func tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
+    func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
         let animal = animals[indexPath.row]
         
         return {
             let node = CardCellNode(animalInfo: animal)
-            node.preferredFrameSize = UIScreen.mainScreen().bounds.size
+            node.debugName = "CELL:\(indexPath.row)"
             return node
         }
+    }
+    
+    @objc(tableNode:constrainedSizeForRowAtIndexPath:)
+    func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
+        let min = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height/3.0 * 2.0)
+        let max = CGSize(width: UIScreen.main.bounds.size.width, height: CGFloat.greatestFiniteMagnitude)
+        return ASSizeRange(min: min, max: max)
     }
 }
 
 // MARK: - Helpers
 
 extension AnimalTableNodeController {
-    func nextPageWithCompletion(block: (results: [RainforestCardInfo]) -> ()) {
+    func nextPageWithCompletion(_ block: @escaping (_ results: [RainforestCardInfo]) -> ()) {
         let moreAnimals = Array(self.animals[0 ..< 5])
         
-        dispatch_async(dispatch_get_main_queue()) {
-            block(results: moreAnimals)
+        DispatchQueue.main.async {
+            block(moreAnimals)
         }
     }
     
-    func insertNewRows(newAnimals: [RainforestCardInfo]) {
+    func insertNewRows(_ newAnimals: [RainforestCardInfo]) {
         let section = 0
-        var indexPaths = [NSIndexPath]()
+        var indexPaths = [IndexPath]()
         
         let newTotalNumberOfPhotos = animals.count + newAnimals.count
         
         for row in animals.count ..< newTotalNumberOfPhotos {
-            let path = NSIndexPath(forRow: row, inSection: section)
+            let path = IndexPath(row: row, section: section)
             indexPaths.append(path)
         }
         
-        animals.appendContentsOf(newAnimals)
-        if let tableView = node.view as? ASTableView {
-            tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .None)
+        animals.append(contentsOf: newAnimals)
+        if let tableNode = node as? ASTableNode {
+            tableNode.insertRows(at: indexPaths, with: .none)
         }
     }
 }

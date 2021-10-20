@@ -4,7 +4,9 @@ import AsyncDisplayKit
 
 class ViewController: UIViewController {
     let pagerNode = ASPagerNode()
-    let allAnimals = [RainforestCardInfo.birdCards(), RainforestCardInfo.mammalCards(), RainforestCardInfo.reptileCards()]
+    let allAnimals = [RainforestCardInfo.birdCards(),
+                      RainforestCardInfo.mammalCards(),
+                      RainforestCardInfo.reptileCards()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,14 +15,14 @@ class ViewController: UIViewController {
         
         self.view.addSubnode(pagerNode)
     }
-
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         self.pagerNode.frame = self.view.bounds
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
 }
@@ -28,19 +30,16 @@ class ViewController: UIViewController {
 // MARK: - ASPagerDataSource
 
 extension ViewController: ASPagerDataSource {
-    func pagerNode(pagerNode: ASPagerNode!, nodeAtIndex index: Int) -> ASCellNode! {
+    func pagerNode(_ pagerNode: ASPagerNode, nodeAt index: Int) -> ASCellNode {
         let animals = allAnimals[index]
-
-        let node = ASCellNode(viewControllerBlock: { () -> UIViewController in
-            return AnimalTableNodeController(animals: animals)
-        }, didLoadBlock: nil)
-
-        node.preferredFrameSize = pagerNode.bounds.size
+        
+        let node = ASCellNode(viewControllerBlock: {
+            return AnimalTableNodeController(animals: animals) as UIViewController
+        }, didLoad: nil)
         
         return node
     }
-
-    func numberOfPagesInPagerNode(pagerNode: ASPagerNode!) -> Int {
+    func numberOfPages(in pagerNode: ASPagerNode) -> Int {
         return allAnimals.count
     }
 }

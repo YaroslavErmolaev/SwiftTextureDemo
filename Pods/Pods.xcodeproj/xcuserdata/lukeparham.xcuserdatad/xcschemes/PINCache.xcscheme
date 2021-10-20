@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D4459CE80D454A8AAFC5D218AF078189'
+               BlueprintIdentifier = 'EC238747EC319DA6E40C2F2E572E1BE9'
                BlueprintName = 'PINCache'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'PINCache.framework'>
